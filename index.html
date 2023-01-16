@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intel 8086</title>
+    <style>
+        .message {
+            visibility: hidden;
+            width: 120px;
+            background-color: rgba(214, 5, 5, 0.77);
+            color: rgba(255, 255, 255, 0.774);
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            margin: 10px;
+            top: -5px;
+            left: 105%;
+            border-radius: 5px 5px;
+            box-shadow: 0 0 5px 0px black;
+        }
+
+        table {
+            border-spacing: 0 15px;
+        }
+
+        table,
+        tr,
+        td {
+            padding: 5px;
+        }
+        #historia{
+            position: absolute;
+            right: 30%;
+            top: 15%;
+        }
+        body{
+            margin-top: 5%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="index.html" method="post">
+
+        <table>
+            <tr>
+                <td>AH: </td>
+                <td><input type="text" name="AH" id="AH" placeholder="00-FF" ></textarea></td>
+                <td><span id="AH_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>AL: </td>
+                <td><input type="text" name="AL" id="AL" placeholder="00-FF"></textarea></td>
+                <td><span id="AL_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>BH: </td>
+                <td><input type="text" name="BH" id="BH" placeholder="00-FF"></textarea></td>
+                <td><span id="BH_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>BL: </td>
+                <td><input type="text" name="BL" id="BL" placeholder="00-FF"></textarea></td>
+                <td><span id="BL_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>CH: </td>
+                <td><input type="text" name="CH" id="CH" placeholder="00-FF"></textarea></td>
+                <td><span id="CH_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>CL: </td>
+                <td><input type="text" name="CL" id="CL" placeholder="00-FF"></textarea></td>
+                <td><span id="CL_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>DH: </td>
+                <td><input type="text" name="DH" id="DH" placeholder="00-FF"></textarea></td>
+                <td><span id="DH_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+            <tr>
+                <td>DL: </td>
+                <td><input type="text" name="DL" id="DL" placeholder="00-FF"></textarea></td>
+                <td><span id="DL_message" class="message">Liczbę podano w złym formacie(00-FF)</span></td>
+            </tr>
+        </table>
+
+    </form>
+
+    <div id="historia">Wyniki ostatnich obliczeń: <hr></div>
+    
+    <br>
+    MENU:
+    <br><br>
+    <select name="pierwszy" id="pierwszy">
+        <option value="AH">AH</option>
+        <option value="AL">AL</option>
+        <option value="BH">BH</option>
+        <option value="BL">BL</option>
+        <option value="CH">CH</option>
+        <option value="CL">CL</option>
+        <option value="DH">DH</option>
+        <option value="DL">DL</option>
+    </select>
+    🡢
+    <select name="drugi" id="drugi">
+        <option value="AH">AH</option>
+        <option value="AL">AL</option>
+        <option value="BH">BH</option>
+        <option value="BL">BL</option>
+        <option value="CH">CH</option>
+        <option value="CL">CL</option>
+        <option value="DH">DH</option>
+        <option value="DL">DL</option>
+    </select>
+    <br><br>
+    <button id="MOVE">MOVE</button>
+    <button id="XCHG">XCHG</button>
+    <button id="ADD">ADD</button>
+    <button id="SUB">SUB</button>
+    <button id="AND">AND</button>
+    <button id="OR">OR</button>
+    <button id="XOR">XOR</button>
+    <hr>
+    <select name="trzeci" id="trzeci">
+        <option value="AH">AH</option>
+        <option value="AL">AL</option>
+        <option value="BH">BH</option>
+        <option value="BL">BL</option>
+        <option value="CH">CH</option>
+        <option value="CL">CL</option>
+        <option value="DH">DH</option>
+        <option value="DL">DL</option>
+    </select>
+    <br><br>
+
+    <button id="NOT">NOT</button>
+    <button id="INC">INC</button>
+    <button id="DEC">DEC</button>
+
+    <script src="intel_8086.js"></script>
+</body>
+
+</html>
